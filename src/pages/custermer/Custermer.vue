@@ -4,7 +4,7 @@
     <el-button type="primary" size="small" @click="toAddHandler">添加</el-button>
     <!--<el-button type="danger" size="small" @click='bacthDeletehandler'>批量</el-button>-->
     <div class="select">
-      <el-input v-model="list.status" clearable="true" placeholder="请输入状态" />
+      <el-input v-model="list.status" clearable="true" placeholder="请输入状态" size="small" />
       <div class="btn">
         <el-button type="primary" size="small" @click="submitHanlderbyStatus">查询</el-button>
       </div>
@@ -14,6 +14,7 @@
     <el-table
       :data="custermers"
       stripe
+      size="small"
       style="width: 100%"
     >
       <el-table-column
@@ -62,7 +63,7 @@
     <!-- 分页 -->
     <!-- 模态框 -->
     <el-dialog :title="title" :visible.sync="dialogFormVisible">
-      <el-form ref="ruleForm" :model="form" :rules="rules" label-width="120px">
+      <el-form ref="ruleForm" :model="form" :rules="rules" label-width="120px" size="small">
         <el-form-item label="用户名" prop="username">
           <el-input v-model="form.username" clearable="true" placeholder="请输入用户名" />
         </el-form-item>
@@ -83,8 +84,8 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="close('ruleForm')">取 消</el-button>
-        <el-button type="primary" @click="submit('ruleForm')">确 定</el-button>
+        <el-button size="small" @click="close('ruleForm')">取 消</el-button>
+        <el-button type="primary" size="small" @click="submit('ruleForm')">确 定</el-button>
       </div>
     </el-dialog>
     <!-- 模态框 -->

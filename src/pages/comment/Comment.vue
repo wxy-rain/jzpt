@@ -7,6 +7,7 @@
     <el-table
       :data="comments"
       stripe
+      size="small"
       style="width: 100%"
     >
       <el-table-column
